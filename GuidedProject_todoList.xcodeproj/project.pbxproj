@@ -15,6 +15,7 @@
 		E5990C60282DDD9B002C6B4E /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5990C5F282DDD9B002C6B4E /* ToDo.swift */; };
 		E5990C62282DDEC9002C6B4E /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5990C61282DDEC9002C6B4E /* ToDoTableViewController.swift */; };
 		E5B8B93E282DF1DB00619223 /* ToDoDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B8B93D282DF1DB00619223 /* ToDoDetailsTableViewController.swift */; };
+		E5B8B940282EB07100619223 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B8B93F282EB07100619223 /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E5990C5F282DDD9B002C6B4E /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		E5990C61282DDEC9002C6B4E /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		E5B8B93D282DF1DB00619223 /* ToDoDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailsTableViewController.swift; sourceTree = "<group>"; };
+		E5B8B93F282EB07100619223 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E5990C5F282DDD9B002C6B4E /* ToDo.swift */,
 				E5990C61282DDEC9002C6B4E /* ToDoTableViewController.swift */,
 				E5B8B93D282DF1DB00619223 /* ToDoDetailsTableViewController.swift */,
+				E5B8B93F282EB07100619223 /* ToDoCell.swift */,
 			);
 			path = GuidedProject_todoList;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5990C4C282DDBF6002C6B4E /* AppDelegate.swift in Sources */,
+				E5B8B940282EB07100619223 /* ToDoCell.swift in Sources */,
 				E5990C4E282DDBF6002C6B4E /* SceneDelegate.swift in Sources */,
 				E5990C60282DDD9B002C6B4E /* ToDo.swift in Sources */,
 				E5990C62282DDEC9002C6B4E /* ToDoTableViewController.swift in Sources */,

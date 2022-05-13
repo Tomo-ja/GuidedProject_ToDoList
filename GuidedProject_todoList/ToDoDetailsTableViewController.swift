@@ -18,7 +18,11 @@ class ToDoDetailsTableViewController: UITableViewController {
     @IBOutlet var notesTextView: UITextView!
     @IBOutlet var saveButton: UIBarButtonItem!
     
-    var isDatePickerHidden = true
+    var isDatePickerHidden = true{
+        didSet{
+            dueDatePicker.isHidden = isDatePickerHidden
+        }
+    }
     let dateLableIndexPath = IndexPath(row: 0, section: 1)
     let datePickerIndexPath = IndexPath(row: 1, section: 1)
     let notesIndexPath = IndexPath(row: 0, section: 2)
@@ -53,7 +57,8 @@ class ToDoDetailsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath{
-            case datePickerIndexPath where isDatePickerHidden == true: return 0
+            case datePickerIndexPath where isDatePickerHidden == true:
+                return 0
             case notesIndexPath:
                 return 200
             default:

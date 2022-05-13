@@ -16,14 +16,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="6RK-sR-3xU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="6RK-sR-3xU" customClass="ToDoCell" customModule="GuidedProject_todoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6RK-sR-3xU" id="Vi0-eG-fJI">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-1X-l6J">
+                                            <rect key="frame" x="20" y="8.5" width="28" height="27"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="circle" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                            </state>
+                                            <state key="selected" image="checkmark.circle.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="completeButtonTapped:" destination="6RK-sR-3xU" eventType="touchUpInside" id="GdO-79-qw3"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXO-zB-DaA">
+                                            <rect key="frame" x="68" y="11.5" width="306" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cXO-zB-DaA" secondAttribute="trailing" constant="20" id="JJb-Df-Hhx"/>
+                                        <constraint firstItem="4QK-1X-l6J" firstAttribute="leading" secondItem="Vi0-eG-fJI" secondAttribute="leading" constant="20" symbolic="YES" id="RMW-Zv-kD6"/>
+                                        <constraint firstItem="cXO-zB-DaA" firstAttribute="leading" secondItem="4QK-1X-l6J" secondAttribute="trailing" constant="20" id="aHj-tc-fyu"/>
+                                        <constraint firstItem="4QK-1X-l6J" firstAttribute="centerY" secondItem="Vi0-eG-fJI" secondAttribute="centerY" id="en9-t9-V5R"/>
+                                        <constraint firstItem="cXO-zB-DaA" firstAttribute="centerY" secondItem="Vi0-eG-fJI" secondAttribute="centerY" id="w3p-KK-tvB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="4QK-1X-l6J" id="EGv-A7-Ydh"/>
+                                    <outlet property="titleLabel" destination="cXO-zB-DaA" id="IJn-t7-E6X"/>
                                     <segue destination="we2-p5-tZt" kind="presentation" id="3GW-Aq-m0H"/>
                                 </connections>
                             </tableViewCell>
@@ -75,7 +105,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceW-bj-nD0">
                                                     <rect key="frame" x="20" y="8.5" width="28" height="27.5"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="checkmark.circle" catalog="system">
+                                                    <state key="normal" image="circle" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                                     </state>
                                                     <state key="selected" image="checkmark.circle.fill" catalog="system">
@@ -244,8 +274,8 @@
         <segue reference="3GW-Aq-m0H"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
